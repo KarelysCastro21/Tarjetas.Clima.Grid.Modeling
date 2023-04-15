@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url("/img/fondo4.jpg");
+    min-height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+/* cards clima*/
+
+h1{
+    text-align: center;
+    color: white;
+    margin: 50px;
+
+}
+
+
+.contenedorclima {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    min-height: calc(100vh-50px-100px);
+}
+
+.tarjetaclima {
+    width: 400px;
+    height: 200px;
+    /*  border: 1px solid black; */
+    border-radius: 6px;
+    background: rgba(158, 222, 236, 0.74);
+    background: linear-gradient(90deg, rgba(158, 222, 236, 0.637) 0%, rgba(208, 230, 255, 0.699) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 10px 10px rgba(128, 128, 128, 0.514)
+}
+
+
+.imagenestiempo {
+    width: 50px;
+    height: 50px;
+    /***** ANIMACION*/
+    animation: logo 8s linear infinite alternate-reverse;
+
+
+}
+
+@keyframes logo {
+    from {
+        transform: translateX(-150px);
+    }
+
+    to {
+        transform: translateX(150px);
+    }
+
+}
+
+/***************FOOTER***********/
+
+footer {
+    
+    width: 100%;
+    height: 100px;
+    margin-top: auto;
+    background-color: rgba(12, 137, 168, 0.788);
+    display: grid;
+    grid-area: footer;
+    grid-template-areas: "mapa legal redes";
+    ;
+
+}
+
+
+.infolegal {
+    grid-area: legal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(56, 55, 55);
+    font-size: 10px;
+}
+
+.redes {
+    grid-area: redes;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.redes i{
+    font-size: 2rem;
+    margin-left: 20px;
+    color: aliceblue;
+
+
+}
+
+.mapasitio {
+    grid-area: mapa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.mapasitio li {
+    list-style: none;
+    font-size: 13px;
+    margin: 5px;
+
+}
+
+
+
+a {
+    text-decoration: none;
+    color: rgba(240, 248, 255, 0.726);
+    font-weight: 700;
+    text-transform: uppercase;
+
+
+}
+
+
+/*****responsive****/
+
+
+@media screen and (max-width:600px) {
+    footer{
+       display: grid;
+        grid-template-areas: 
+        "Mapa"
+        "redes"
+        "legal";
+    }
+}
